@@ -1,0 +1,26 @@
+// pearson c++ how to program 9th edition -- Homework 6.40 (Visualizing Recursion)
+#include <iostream>
+#include <iomanip>
+#include <stdio.h>
+using namespace std;
+
+int j = 0;
+unsigned long factorial (unsigned long);
+
+int main()
+{
+        cout << setw (2) << 10 << "! = " << factorial (10) << endl;
+}
+
+unsigned long factorial (unsigned long n) {
+    if (n <= 1) {
+        cout << "last step n value is 1" << endl;
+        return 1;
+    } else {
+        cout << "step " << j << ": n value is " << 10 - j << endl;
+        j ++;
+        return n * factorial (n - 1);
+        cout << "nothing will print" << endl;
+    }
+}
+
