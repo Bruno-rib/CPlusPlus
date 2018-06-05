@@ -1,0 +1,35 @@
+#include <cmath>
+#include <iostream>
+#include <stdio.h>
+using namespace std;
+
+int d = 0;
+int dn = 0;
+int inp = 1;
+
+void binary ();
+void input ();
+
+int main()
+{
+    input ();
+    binary ();
+}
+
+void input () {
+    cout << "please enter a binary integer to be evaluated: \t";
+    cin >> inp;
+    cout << endl << endl;
+}
+
+void binary () {
+    for (int i = 0; inp > 0; i++) {
+        d = inp % 10;
+        inp = inp / 10;
+        dn = dn + d * pow (2, i);
+    }
+    cout << "The decimal equivalent is: \t" << dn;
+}
+
+
+
